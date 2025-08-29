@@ -57,6 +57,7 @@ public class OrderItem implements Serializable {
         return Objects.hashCode(id);
     }
 
+
     public Product getProduct(){
         return id.getProduct();
     }
