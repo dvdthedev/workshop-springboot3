@@ -43,6 +43,14 @@ public class Order implements Serializable {
         this.client = client;
     }
 
+    public Double getTotal(){
+        double acc = 0.0;
+        for(OrderItem x : items){
+            acc += x.getSubTotal();
+        }
+        return acc;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
